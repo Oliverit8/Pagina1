@@ -2,19 +2,21 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Tienda de Café y Panela</title>
     <style>
-        
-        body {
-        font-family: 'Arial', sans-serif;
-        margin: 0;
-        padding: 0;
-        margin-bottom: 60px; /* Ajusta este valor según sea necesario para dar espacio al pie de página */
+       body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 60px; /* Ajusta este valor según sea necesario para dar espacio al pie de página */
 }
 
 header {
-    background-color: #ffffff;
+    background-color:#9B9078;
     padding: 20px;
     display: flex;
     justify-content: space-between;
@@ -22,9 +24,20 @@ header {
 }
 
 .logo img {
-    width: 200px;
+    width: 100px;
     height: 100px;
-    margin-right: 200px;
+    margin-right: 10px;
+    border-radius: 50%; /* Agrega esta propiedad para hacer el borde redondo */
+}
+.nombre-tienda {
+    display: flex;
+    flex-direction: column;
+}
+
+.nombre-tienda h1 {
+    margin: 0;
+    font-size: 1.5em;
+    color: #050505;
 }
 
 nav ul {
@@ -40,25 +53,27 @@ nav li {
 
 nav a {
     text-decoration: none;
-    color: #333;
+    color: #680909;
     font-weight: bold;
 }
 
 section {
     padding: 20px;
 }
+
 #productos {
-    background-color: #FFE4B2; /* Agrega el color de fondo que desees */
+    background-color: #D1B8A5; /* Agrega el color de fondo que desees */
     padding: 20px;
 }
+
 .producto {
     margin-bottom: 40px;
 }
 
 .producto img {
-    width: 100%;
-    max-height: 200px;
-    object-fit: cover;
+    width: 100%; /* El ancho será el 100% del contenedor padre (div.producto en este caso) */
+    max-height: 200px; /* Establece una altura máxima para mantener las proporciones */
+    object-fit: cover; /* Ajusta la forma en que la imagen se ajusta al contenedor */
 }
 
 .producto h3 {
@@ -69,10 +84,17 @@ section {
     color: #cc0000;
     font-weight: bold;
 }
+#nosotros {
+    background-color: #9B9078; /* Color de fondo para la sección "Acerca de Nosotros" */
+}
+
+#contacto {
+    background-color: #ffd9b3; /* Color de fondo para la sección "Contacto" */
+}
 
 button {
-    background-color:#E9C4A3;
-    color: #130202;
+    background-color: #333;
+    color: #fff;
     padding: 10px;
     border: none;
     cursor: pointer;
@@ -80,26 +102,29 @@ button {
 }
 
 footer {
-    background-color:#FED8A6;
-    color: #0a0101;
+    background-color: #333;
+    color: #fff;
     text-align: center;
     padding: 10px;
     /* Elimina 'position: fixed;' y agrega lo siguiente: */
     position: relative;
     bottom: 0;
     width: 100%;
+    
 }
-
+ /* Tu CSS aquí */
     </style>
-    <link rel="stylesheet" href="styles.css">
     <title>Tienda de Café y Panela</title>
 </head>
 <body>
+    <!-- Encabezado -->
     <header>
         <div class="logo">
-            <img src="logo.jpg" alt="Logo de la tienda">
-            <h1>Tienda de Café y Panela</h1>
+            <img src="https://media.istockphoto.com/id/1467739359/es/foto/taza-de-caf%C3%A9-con-humo-y-granos-de-caf%C3%A9-sobre-fondo-de-madera-viejo.jpg?s=612x612&w=is&k=20&c=oUXc-WXdny6ZbaYiLqO21uy_-MYJ2mGuziR2f6Oc0a4=" alt="Logo de la tienda">
         </div>
+        <div class="nombre-tienda">
+            <h1>Tienda de Café y Panela</h1>
+                    </div>
         <nav>
             <ul>
                 <li><a href="#productos">Productos</a></li>
@@ -109,34 +134,38 @@ footer {
         </nav>
     </header>
 
+    <!-- Sección de Productos -->
     <section id="productos">
         <h2>Nuestros Productos</h2>
         <div class="producto">
-            <alt="Café Especial 1">
+            <img src="cafe1.jpg" alt="Café Especial 1">
             <h3>Café Especial 1</h3>
-            <p>Descripción del café especial. </p>
+            <p>Descripción del café especial. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
             <p class="precio">$10.99</p>
             <button>Agregar al Carrito</button>
         </div>
         <div class="producto">
             <img src="panela1.jpg" alt="Panela Orgánica 1">
             <h3>Panela Orgánica 1</h3>
-            <p>Descripción de la panela orgánica.</p>
+            <p>Descripción de la panela orgánica. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
             <p class="precio">$8.99</p>
             <button>Agregar al Carrito</button>
         </div>
     </section>
 
+    <!-- Sección Acerca de Nosotros -->
     <section id="nosotros">
         <h2>Acerca de Nosotros</h2>
         <p>Somos una tienda apasionada por ofrecer café de especialidad y panela orgánica de la más alta calidad. Nos esforzamos por brindar una experiencia única y deliciosa a nuestros clientes.</p>
     </section>
 
+    <!-- Sección de Contacto -->
     <section id="contacto">
         <h2>Contacto</h2>
         <p>¡Estamos aquí para ayudarte! Contáctanos al: <strong>032684194</strong></p>
     </section>
 
+    <!-- Pie de Página -->
     <footer>
         <p>&copy; 2023 Tienda de Café y Panela</p>
     </footer>
